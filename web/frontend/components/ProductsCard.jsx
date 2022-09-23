@@ -36,6 +36,7 @@ export function ProductsCard() {
   const handlePopulate = async () => {
     setIsLoading(true);
     const response = await fetch("/api/products/create");
+    console.log(response);
 
     if (response.ok) {
       await refetchProductCount();

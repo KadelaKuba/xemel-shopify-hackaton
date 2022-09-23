@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { NavigationMenu } from "@shopify/app-bridge-react";
+import {NavigationMenu, useAppBridgeState} from "@shopify/app-bridge-react";
 import Routes from "./Routes";
 
 import {
@@ -21,8 +21,16 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                   {
-                      label: "Settings",
-                      destination: "/pagename",
+                      label: "Nastavení",
+                      destination: "/settings",
+                  },
+                  {
+                      label: "Feedy",
+                      destination: "/feeds",
+                  },
+                  {
+                      label: "Historie",
+                      destination: "/history",
                   },
               ]}
             />
